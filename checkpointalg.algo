@@ -1,0 +1,42 @@
+
+ALGORITHM algorithm_name 
+VAR 
+   k,i,j,sum_vowels,sum_mot,sum_char,sum_espace,sum :integer;
+   h :char;
+ BEGIN
+REPEAT
+   write("donner une chaine",n);
+ read(n);
+ k=length.n;
+UNTIL (n[k]==".")
+
+
+
+
+ sum:=0;
+ h:="";
+ sum_mot:=0;
+ sum_espace:=0;
+ FOR i FROM 0 TO length.n STEP i++  DO
+    IF (i==h) THEN
+      
+      delete(n,i,1);
+      sum_espace++;
+      
+       END_IF
+ END_FOR
+ 
+
+ sum_char=length.n;
+ sum_mot=sum_espace+1;
+ char tab=[A,E,I,O,U,y];
+ sum_vowels:=0;
+ FOR i FROM 0 TO length.n STEP i++  DO
+    FOR j FROM 0 TO 6 STEP j++  DO
+      IF ((n[i]==tab[j]) THEN
+         sum_vowels++;
+      END_IF
+    END_FOR
+ END_FOR
+ 
+ END
